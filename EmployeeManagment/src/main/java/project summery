@@ -1,0 +1,38 @@
+This code appears to be a Java application built using the Spring Framework to create a
+simple Employee Management system. Let's break down the technologies and provide a brief introduction:
+
+1. **Java**: The code is primarily written in Java, which is a widely-used programming language.
+
+2. **Spring Framework**: This application is built using the Spring Framework, which is a popular
+framework for building Java-based enterprise applications. It provides various modules for handling different aspects
+of application development, including web applications.
+
+3. **Spring Boot**: Although not explicitly mentioned in the code, Spring Boot is commonly used with Spring Framework
+for building stand-alone, production-ready Spring-based applications. It simplifies the configuration and deployment process.
+
+4. **RESTful API**: The application uses RESTful principles to create a web service for managing employee data.
+It exposes endpoints for CRUD (Create, Read, Update, Delete) operations on employee records.
+
+5. **RestController**: This annotation is used in the `employeeController` class to define it as a controller
+ that handles HTTP requests and returns JSON responses. It's part of Spring MVC for building RESTful web services.
+
+6. **@GetMapping, @PostMapping, @DeleteMapping**: These annotations are used to map HTTP GET, POST, and DELETE requests
+to specific methods in the controller class, defining the API endpoints.
+
+7. **@CrossOrigin**: This annotation allows cross-origin resource sharing (CORS), which enables the
+ client-side code from different domains to make requests to this API.
+
+8. **@RequestBody**: This annotation is used to indicate that a method parameter should be bound
+to the body of the HTTP request. It's used in the `addEmployee` method to parse the request body
+and create an `Employee` object.
+
+9. **Model Class (`Employee`)**: The `Employee` class represents the model for employee data.
+ It has fields for name, employee ID, and salary, along with getter and setter methods.
+
+10. **EmployeeService**: This class is a simple service layer that manages employee data.
+It uses a `HashMap` (`empStore`) to store employee records and provides methods for retrieving all employees, adding employees, and deleting employees.
+
+In summary, this code is a basic example of a RESTful API built with the Spring Framework for managing employee data.
+ It allows clients to perform CRUD operations on employee records by making HTTP requests to the specified endpoints.
+  The code is a simplified example and lacks features like database integration, error handling, and proper RESTful
+  conventions, but it serves as a starting point for understanding how to build a web service with Spring.
